@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "faker": "^4.1.0",
-    "kafka-node": "^5.0.0"
+    "faker": "^4.1.0"
   }
 }

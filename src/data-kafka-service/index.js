@@ -1,3 +1,5 @@
-const setupAndStartProducer = require('./src/producer')
+const init = require('./src')
 
-setupAndStartProducer()
+setInterval(() => console.log('PING'), 3000)
+
+init()
