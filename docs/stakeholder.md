@@ -4,4 +4,4 @@
 
 # Контекстная диаграмма
 
-![Untitled/Untitled.png](Untitled/Untitled.png)
+![Untitled/Untitled.png](assets/example.png)
