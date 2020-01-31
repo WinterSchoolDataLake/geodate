@@ -61,7 +61,7 @@ Spark должен выдавать сформированный датафре�
 
 ## Макет системы:
 
-[Диаграмма без названия (1).drawio](Data%20Lake%20Kafka%20spark%20streamig%20geomesa%20NoSQL/___(1).drawio)
+[Макет.png](https://raw.githubusercontent.com/WinterSchoolDataLake/geodate/master/docs/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%20%D0%B1%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20(1).png)
 
 ## **Правила и ограничения**:
 
@@ -69,10 +69,10 @@ Spark должен выдавать сформированный датафре�
 
 ## Дополнительная информация:
 
-[Стейкхолдеры](https://www.notion.so/fe737322170a4d8090946dd2c597a503)
+[Стейкхолдеры](https://github.com/WinterSchoolDataLake/geodate/blob/master/docs/stakeholder.md)
 
-[Словарь терминов](https://www.notion.so/2d12e4f4a7da49b1893ac655562cd4e8)
+[Словарь терминов](https://github.com/WinterSchoolDataLake/geodate/blob/master/docs/Dictionary.md)
 
-[Доступы к стендам и внешним системам](https://www.notion.so/c5f19871fe7e4b5ea5eac72fa981a9d0)
+[Доступы к стендам и внешним системам](https://github.com/WinterSchoolDataLake/geodate/blob/master/docs/stand_access.md)
 
-[Версии проекта](https://www.notion.so/331c901ef0574fbd8b15a8ca04298aef)
+[Версии проекта](https://github.com/WinterSchoolDataLake/geodate/blob/master/docs/versions.md)
