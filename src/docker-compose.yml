@@ -19,5 +19,7 @@ services:
       context: ./data-kafka-service
       dockerfile: Dockerfile
     network_mode: host
+    environment:
+      - KAFKA_CLIENT_CONNECT=localhost:9092
     depends_on:
       - kafka

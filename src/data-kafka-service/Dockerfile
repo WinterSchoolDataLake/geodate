@@ -12,6 +12,6 @@ COPY index.js ${APP_HOME}
 COPY src ${APP_HOME}/src
 
 RUN npm i
-RUN npm install kafka-node --no-optional --save
+RUN npm install kafka-node --no-optional
 
 ENTRYPOINT ["node", "index.js"]
