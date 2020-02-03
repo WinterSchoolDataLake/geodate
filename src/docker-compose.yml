@@ -18,8 +18,14 @@ services:
     build:
       context: ./data-kafka-service
       dockerfile: Dockerfile
-    network_mode: host
     environment:
-      - KAFKA_CLIENT_CONNECT=localhost:9092
+      - KAFKA_CLIENT_CONNECT=kafka:9092
     depends_on:
       - kafka
+
+  casa:
+    image: cassandra
+    volumes:
+      - "./cassandra/cassandra-init.sh:/cassandra-init.sh"
+    command: "sh /cassandra-init.sh"
+

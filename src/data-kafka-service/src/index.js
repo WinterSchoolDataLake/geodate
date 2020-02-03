@@ -8,26 +8,30 @@ console.log(KAFKA_HOST);
 const DEFAULT_TOPIC = { topic: TOPIC_NAME, partitions: 1, replicationFactor: 1}
 
 // CORE
-const Client = new kafka.KafkaClient({kafkaHost: 'localhost:9092'})
-const Consumer = kafka.Consumer
-const Producer = kafka.Producer
+const client = new kafka.KafkaClient({
+    kafkaHost: KAFKA_HOST
+})
 
 function createTopics() {
-    Client.createTopics([{...DEFAULT_TOPIC}], (err, res) => (!err && res) && console.log('Topics was created success'))
+    client.createTopics([{...DEFAULT_TOPIC}], (err, res) => {
+        console.log("Create topic error " , err, " Success ", res)
+    })
 }
 
 
 // CONSUMER
 function setupConsumer() {
+    const Consumer = kafka.Consumer
     console.log('setupConsumer');
-    const consumer = new Consumer(Client, [DEFAULT_TOPIC], {})
+    const consumer = new Consumer(client, [DEFAULT_TOPIC], {})
     consumer.on('message', message => console.log(`message ${message.value} was received`))
 }
 
 // PRODUCER
 function startProducer() {
+    const Producer = kafka.Producer
     console.log('startProducer');
-    const producer = new Producer(Client)
+    const producer = new Producer(client)
 
     const getRandomRecord = () => ({
         id: faker.random.number(),
@@ -44,12 +48,14 @@ function startProducer() {
             () => console.log(`${JSON.stringify(data)} had sent`))
         setInterval(() => sendFn(getRandomRecord()), 1500)
     })
+    producer.on('error', err => console.log('Producer error ', err))
 }
+
 
 function init() {
     createTopics()
-    setupConsumer()
     startProducer()
+    setupConsumer()
 }
 
 module.exports = init
