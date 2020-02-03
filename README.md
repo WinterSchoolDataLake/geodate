@@ -55,7 +55,7 @@ Python 3.6+, Java, Scala, Apache Kafka, Apache Cassandra, Apache Spark, GeoMesa,
 
 ## Дополнительная информация:
 
-[Стейкхолдеры](https://github.com/WinterSchoolDataLake/geodate/blob/master/docs/stakeholder.md)
+[Стейкхолдеры](https://github.com/WinterSchoolDataLake/geodate/blob/master/docs/Untitled.md)
 
 [Словарь терминов](https://github.com/WinterSchoolDataLake/geodate/blob/master/docs/dictionary.md)
 
