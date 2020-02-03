@@ -1,17 +1,13 @@
-FROM node:10.16-alpine as dependencies
+FROM python:3.7-alpine
 
 ENV APP_HOME=/app
 
 RUN mkdir -p ${APP_HOME}
 WORKDIR ${APP_HOME}
 
-COPY ./package.json ${APP_HOME}
-RUN mkdir -p src
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY index.js ${APP_HOME}
-COPY src ${APP_HOME}/src
+COPY . .
 
-RUN npm i
-RUN npm install kafka-node --no-optional
-
-ENTRYPOINT ["node", "index.js"]
+CMD ["python", "main.py"]
