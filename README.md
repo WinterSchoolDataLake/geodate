@@ -51,5 +51,3 @@ Spark должен выдавать сформированный датафре�
 [Стейкхолдеры](https://github.com/WinterSchoolDataLake/geodate/blob/master/docs/Untitled.md)
 
 [Словарь терминов](https://github.com/WinterSchoolDataLake/geodate/blob/master/docs/dictionary.md)
-
-[Доступы к стендам и внешним системам](https://github.com/WinterSchoolDataLake/geodate/blob/master/docs/stand_access.md)
